@@ -19,3 +19,4 @@ TODO
 - TDD
 - Frontend
 - Dockerfile
+- Separete classes into files

@@ -1,17 +1,4 @@
-# Parent Class
-class User():
-    def __init__(self, name, age, gender):
-        self.name = name
-        self.age = age
-        self.gender = gender
-    
-    def show_details(self):
-        print("Personal Details")
-        print("")
-        print("Name ", self.name)
-        print("Age ", self.age)
-        print("Gender ", self.gender)
-
+from user import User
 # Child Class
 class Bank(User):
     def __init__(self, name, age, gender):
@@ -34,10 +21,3 @@ class Bank(User):
     def view_balance(self):
         self.show_details()
         print("Account Balance: ", self.balance)
-
-if __name__ == '__main__':
-    new_bank_account = Bank("Rafael", 27, "Male")
-    new_bank_account.deposit(1)
-    new_bank_account.show_details()
-    new_bank_account.withdraw(2)
-    new_bank_account.view_balance()
