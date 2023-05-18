@@ -1,3 +1,4 @@
+import json
 # Parent Class
 class User():
     def __init__(self, name, age, gender):
@@ -6,8 +7,9 @@ class User():
         self.gender = gender
     
     def show_details(self):
-        print("Personal Details")
-        print("")
-        print("Name ", self.name)
-        print("Age ", self.age)
-        print("Gender ", self.gender)
+        details = {
+            "name": self.name,
+            "age": self.age,
+            "gender": self.gender
+        }
+        return json.dumps(details)
